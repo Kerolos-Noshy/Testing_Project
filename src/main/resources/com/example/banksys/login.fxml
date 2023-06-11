@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B3CCF5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banksys.loginController">
+    <children>
+        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: #293241;">
+            <left>
+                <AnchorPane prefHeight="410.0" prefWidth="241.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="215.0" fitWidth="206.0" layoutX="14.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icon/MicrosoftTeams-image (1).png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </left>
+            <right>
+                <AnchorPane prefHeight="410.0" prefWidth="356.0" style="-fx-background-color: #B3CCF5;" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="163.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icon/MicrosoftTeams-image.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="14.0" layoutY="157.0" style="-fx-background-color: #B3CCF5;" text="Username" textFill="#293241">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="229.0" text="Password" textFill="#293241">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                        </Label>
+                        <TextField fx:id="username" layoutX="174.0" layoutY="159.0" promptText="Username" style="-fx-background-color: CBE4DE;" />
+                        <PasswordField fx:id="password" layoutX="174.0" layoutY="231.0" promptText="Password" style="-fx-background-color: CBE4DE;" />
+                        <Button layoutX="86.0" layoutY="308.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="31.0" prefWidth="74.0" style="-fx-background-color: cbe4de;" text="Log In" textFill="#293241">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                        <Label fx:id="wrong" layoutX="33.0" layoutY="107.0" prefHeight="35.0" prefWidth="306.0" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding></Label>
+                        <Line endX="-34.399986267089844" endY="38.4000129699707" layoutX="61.0" layoutY="3.0" startX="-34.399986267089844" startY="364.0" stroke="#cbe4de" />
+                        <Button layoutX="220.0" layoutY="309.0" mnemonicParsing="false" onAction="#signup" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: cbe4de;" text="Sign Up" textFill="#293241">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </AnchorPane>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>
