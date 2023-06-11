@@ -4,3 +4,4 @@ public class InsufficientBalance extends Exception{
         super("An amount of " + required + " is required");
     }
 }
+
