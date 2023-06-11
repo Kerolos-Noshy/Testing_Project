@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banksys.BillDetailsController">
+   <children>
+      <BorderPane prefHeight="457.0" prefWidth="660.0" style="-fx-background-color: #6d6875;">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="660.0" style="-fx-background-color: #293241;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/bank.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label graphicTextGap="50.0" minWidth="220.0" prefHeight="39.0" prefWidth="293.0" text="Bill Details" textFill="#e0fbfc">
+                     <font>
+                        <Font name="Copperplate Gothic Light" size="34.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/back.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="240.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: B3CCF5;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="409.0" prefWidth="661.0">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="661.0">
+                           <children>
+                              <Label text="Bill Number:">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="billid" text="#id">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="661.0">
+                           <children>
+                              <Label text="Date:">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="date" text="date">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="661.0">
+                           <children>
+                              <Label text="Store:">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="store" text="store">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="661.0">
+                           <children>
+                              <Label text="Total Price">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="price" text="Price">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="278.0" prefWidth="661.0">
+                           <children>
+                              <Label text="Purchases:">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="details" text="items + quantities">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

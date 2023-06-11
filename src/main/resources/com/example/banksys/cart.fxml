@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="660.0" style="-fx-background-color: #e0fbfc;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.banksys.cartcontroller">
+   <children>
+      <BorderPane layoutY="-2.0" prefHeight="457.0" prefWidth="660.0" style="-fx-background-color: #6d6875;">
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="660.0" style="-fx-background-color: #293241;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="38.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/shopping-cart.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label graphicTextGap="50.0" text="Cart" textFill="#e0fbfc">
+                     <font>
+                        <Font name="Copperplate Gothic Light" size="34.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/back.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="440.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: B3CCF5;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="458.0" prefWidth="660.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="90.0" prefWidth="661.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="248.0" text="Quantity of certain item ">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="40.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Corbel Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="item" prefHeight="30.0" prefWidth="146.0" promptText="items to buy" style="-fx-background-color: #e0fbfc;" visibleRowCount="4">
+                                       <HBox.margin>
+                                          <Insets right="10.0" top="40.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <ImageView fitHeight="42.0" fitWidth="58.0" onMouseClicked="#pressadd" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icon/p.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="35.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="42.0" fitWidth="47.0" onMousePressed="#pressminus" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icon/minus.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="40.0" top="35.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="81.0" prefWidth="661.0">
+                                 <children>
+                                    <Label text="Total Price">
+                                       <font>
+                                          <Font name="System Italic" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="100.0" top="20.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="price" prefHeight="23.0" prefWidth="250.0">
+                                       <HBox.margin>
+                                          <Insets left="120.0" top="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="Corbel Italic" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="54.0" fitWidth="53.0" onMouseClicked="#buy" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icon/buyFF.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="39.0" prefWidth="661.0">
+                                 <children>
+                                    <Label fx:id="confirmation" prefHeight="23.0" prefWidth="250.0">
+                                       <HBox.margin>
+                                          <Insets left="210.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <TableView fx:id="cart" prefHeight="217.0" prefWidth="661.0" style="-fx-background-color: #e0fbfc;">
+                           <columns>
+                              <TableColumn fx:id="itemcolumn" prefWidth="312.7999938726425" text="Item name" />
+                              <TableColumn fx:id="Qtycolumn" prefWidth="167.20001220703125" text="Quantity" />
+                              <TableColumn fx:id="pricecolumn" prefWidth="179.99996948242188" text="Price" />
+                           </columns>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
