@@ -1,7 +1,7 @@
 # Online_Banking_System
 
 ## Overview
-This is a group project for an Online Banking System, developed as part of a Software Testing course built with Java, creating a graphical user interface (GUI) using JavaFX, and testing its functionalities with JUnit 4.
+This is a group project for an Online Banking System, developed as part of the Software Testing course built with Java, creating a graphical user interface (GUI) using JavaFX, and testing its functionalities with JUnit 4.
 
 The main objective of this project is to design, implement, and test an online banking system that provides users with features for managing their bank accounts, performing transactions, paying bills, and providing payment and transaction history.
 
